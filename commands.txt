@@ -1,0 +1,19 @@
+# install minikube
+
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 
+sudo install minikube-linux-amd64 /usr/local/bin/minikube  
+
+minikube start # run cluster
+
+alias kubectl="minikube kubectl --" # create alias minikube => kubectl
+
+minikube node add # create nodes
+
+kubectl get nodes # info nodes
+
+kubctl get pods -A # info pods
+
+minikube stop # stop cluster
+
+minikube delete # delete cluster
+
